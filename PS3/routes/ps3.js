@@ -3,19 +3,19 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+    const string = req.query.string;
     res.render('ps3',
         {
-            string: req.query.string,
-            len: req.query.string.length
+            string: "hello"
         });
 });
 
 router.post('/', (req, res, next) => {
-    //const foo = JSON.parse((req.b.string))
-    const len = length(req.body.string);
+    const string = req.body.string;
+    let len = string.length;
     res.send(
         {
-            string: req.body.string,
+            string: string,
             length: len
         });
 });
