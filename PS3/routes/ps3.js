@@ -3,20 +3,17 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    const string = req.query.string;
     res.render('ps3',
         {
-            string: "hello"
+            output: "hello!"
         });
 });
 
 router.post('/', (req, res, next) => {
-    const string = req.body.string;
-    let len = string.length;
-    res.send(
+    res.render('ps3',
         {
-            string: string,
-            length: len
+            string: req.body.input,
+            len: req.body.input.length
         });
 });
 

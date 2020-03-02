@@ -1,8 +1,6 @@
 extends layout
 
 block content
-    body
-        string
-    form(action='/', method='GET')
-        p {string: #{string}}
+    p GET returns {String: #{output}}
+    p POST returns {String: #{string}, Length: #{len}}
 
