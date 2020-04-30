@@ -1,0 +1,11 @@
+<div style="text-align:center">
+  <h1>
+    Nearest Divesite!!
+  </h1>
+</div>
+
+<ng-container *ngFor="let results of diveData">
+  <li><b>Name:</b> {{ results.sites[0].name }}</li>
+  <li><b>Distance (mi):</b> {{ results.sites[0].distance }}</li>
+  <br>
+</ng-container>
